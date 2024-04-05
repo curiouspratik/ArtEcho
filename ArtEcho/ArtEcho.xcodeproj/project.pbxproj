@@ -13,6 +13,13 @@
 		93AFA2012BC0711E00B9C7EF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 93AFA2002BC0711E00B9C7EF /* Base */; };
 		93AFA2032BC0712000B9C7EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93AFA2022BC0712000B9C7EF /* Assets.xcassets */; };
 		93AFA2062BC0712000B9C7EF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 93AFA2052BC0712000B9C7EF /* Base */; };
+		93AFA2192BC0792E00B9C7EF /* BufferSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFA2182BC0792E00B9C7EF /* BufferSpinnerView.swift */; };
+		93AFA21B2BC0796500B9C7EF /* BufferSprinnerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFA21A2BC0796500B9C7EF /* BufferSprinnerProtocol.swift */; };
+		93AFA21D2BC07F4000B9C7EF /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFA21C2BC07F4000B9C7EF /* MainScreenView.swift */; };
+		93AFA21F2BC07F6F00B9C7EF /* FavouritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFA21E2BC07F6F00B9C7EF /* FavouritesTableViewCell.swift */; };
+		93AFA2212BC07FC200B9C7EF /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFA2202BC07FC200B9C7EF /* RegisterView.swift */; };
+		93AFA2232BC09CB100B9C7EF /* NewPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFA2222BC09CB100B9C7EF /* NewPromptView.swift */; };
+		93AFA2252BC0A1BF00B9C7EF /* ShowPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AFA2242BC0A1BF00B9C7EF /* ShowPromptView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		93AFA2022BC0712000B9C7EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93AFA2052BC0712000B9C7EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93AFA2072BC0712000B9C7EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93AFA2182BC0792E00B9C7EF /* BufferSpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferSpinnerView.swift; sourceTree = "<group>"; };
+		93AFA21A2BC0796500B9C7EF /* BufferSprinnerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferSprinnerProtocol.swift; sourceTree = "<group>"; };
+		93AFA21C2BC07F4000B9C7EF /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		93AFA21E2BC07F6F00B9C7EF /* FavouritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewCell.swift; sourceTree = "<group>"; };
+		93AFA2202BC07FC200B9C7EF /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		93AFA2222BC09CB100B9C7EF /* NewPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPromptView.swift; sourceTree = "<group>"; };
+		93AFA2242BC0A1BF00B9C7EF /* ShowPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPromptView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,11 @@
 		93AFA1F82BC0711E00B9C7EF /* ArtEcho */ = {
 			isa = PBXGroup;
 			children = (
+				93AFA2112BC0781700B9C7EF /* Register Screen View */,
+				93AFA2102BC077F800B9C7EF /* Buffer Animation */,
+				93AFA20F2BC077C600B9C7EF /* Show Prompt Screen */,
+				93AFA20E2BC0779500B9C7EF /* New Prompt Screen */,
+				93AFA20D2BC0777C00B9C7EF /* Main Screen View */,
 				93AFA1F92BC0711E00B9C7EF /* AppDelegate.swift */,
 				93AFA1FB2BC0711E00B9C7EF /* SceneDelegate.swift */,
 				93AFA1FD2BC0711E00B9C7EF /* ViewController.swift */,
@@ -65,6 +84,88 @@
 				93AFA2072BC0712000B9C7EF /* Info.plist */,
 			);
 			path = ArtEcho;
+			sourceTree = "<group>";
+		};
+		93AFA20D2BC0777C00B9C7EF /* Main Screen View */ = {
+			isa = PBXGroup;
+			children = (
+				93AFA2122BC0782800B9C7EF /* View */,
+			);
+			path = "Main Screen View";
+			sourceTree = "<group>";
+		};
+		93AFA20E2BC0779500B9C7EF /* New Prompt Screen */ = {
+			isa = PBXGroup;
+			children = (
+				93AFA2132BC0783200B9C7EF /* View */,
+			);
+			path = "New Prompt Screen";
+			sourceTree = "<group>";
+		};
+		93AFA20F2BC077C600B9C7EF /* Show Prompt Screen */ = {
+			isa = PBXGroup;
+			children = (
+				93AFA2142BC0783900B9C7EF /* View */,
+			);
+			path = "Show Prompt Screen";
+			sourceTree = "<group>";
+		};
+		93AFA2102BC077F800B9C7EF /* Buffer Animation */ = {
+			isa = PBXGroup;
+			children = (
+				93AFA2152BC0783F00B9C7EF /* View */,
+				93AFA21A2BC0796500B9C7EF /* BufferSprinnerProtocol.swift */,
+			);
+			path = "Buffer Animation";
+			sourceTree = "<group>";
+		};
+		93AFA2112BC0781700B9C7EF /* Register Screen View */ = {
+			isa = PBXGroup;
+			children = (
+				93AFA2172BC0785400B9C7EF /* View */,
+			);
+			path = "Register Screen View";
+			sourceTree = "<group>";
+		};
+		93AFA2122BC0782800B9C7EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93AFA21C2BC07F4000B9C7EF /* MainScreenView.swift */,
+				93AFA21E2BC07F6F00B9C7EF /* FavouritesTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93AFA2132BC0783200B9C7EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93AFA2222BC09CB100B9C7EF /* NewPromptView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93AFA2142BC0783900B9C7EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93AFA2242BC0A1BF00B9C7EF /* ShowPromptView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93AFA2152BC0783F00B9C7EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93AFA2182BC0792E00B9C7EF /* BufferSpinnerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93AFA2172BC0785400B9C7EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93AFA2202BC07FC200B9C7EF /* RegisterView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93AFA21F2BC07F6F00B9C7EF /* FavouritesTableViewCell.swift in Sources */,
 				93AFA1FE2BC0711E00B9C7EF /* ViewController.swift in Sources */,
+				93AFA21D2BC07F4000B9C7EF /* MainScreenView.swift in Sources */,
 				93AFA1FA2BC0711E00B9C7EF /* AppDelegate.swift in Sources */,
+				93AFA2192BC0792E00B9C7EF /* BufferSpinnerView.swift in Sources */,
+				93AFA2212BC07FC200B9C7EF /* RegisterView.swift in Sources */,
+				93AFA2232BC09CB100B9C7EF /* NewPromptView.swift in Sources */,
+				93AFA2252BC0A1BF00B9C7EF /* ShowPromptView.swift in Sources */,
 				93AFA1FC2BC0711E00B9C7EF /* SceneDelegate.swift in Sources */,
+				93AFA21B2BC0796500B9C7EF /* BufferSprinnerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
