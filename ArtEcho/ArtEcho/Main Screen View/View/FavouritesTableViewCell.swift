@@ -10,17 +10,17 @@ import UIKit
 class FavouritesTableViewCell: UITableViewCell {
     
     var wrapperCellView: UIView!
-    var labelName: UILabel!
-    var labelPlace: UILabel!
-    var labelText: UILabel!
+    var labelPrompt: UILabel!
+    var labelAnswer: UILabel!
+    var imagePhoto: UIImageView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupWrapperCellView()
-        setupLabelName()
-        setupLabelPlace()
-        setupLabelText()
+        setupLabelPrompt()
+        setupLabelAnswer()
+        setupImagePhoto()
         
         initConstraints()
     }
@@ -43,25 +43,28 @@ class FavouritesTableViewCell: UITableViewCell {
         self.addSubview(wrapperCellView)
     }
     
-    func setupLabelName(){
-        labelName = UILabel()
-        labelName.font = UIFont.boldSystemFont(ofSize: 20)
-        labelName.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCellView.addSubview(labelName)
+    func setupLabelPrompt(){
+        labelPrompt = UILabel()
+        labelPrompt.font = UIFont.boldSystemFont(ofSize: 20)
+        labelPrompt.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(labelPrompt)
     }
     
-    func setupLabelPlace(){
-        labelPlace = UILabel()
-        labelPlace.font = UIFont.boldSystemFont(ofSize: 14)
-        labelPlace.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCellView.addSubview(labelPlace)
+    func setupLabelAnswer(){
+        labelAnswer = UILabel()
+        labelAnswer.font = UIFont.boldSystemFont(ofSize: 14)
+        labelAnswer.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(labelAnswer)
     }
     
-    func setupLabelText(){
-        labelText = UILabel()
-        labelText.font = UIFont.boldSystemFont(ofSize: 14)
-        labelText.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCellView.addSubview(labelText)
+    func setupImagePhoto(){
+        imagePhoto = UIImageView()
+        imagePhoto.image = UIImage(systemName: "camera.fill")?.withRenderingMode(.alwaysOriginal)
+        imagePhoto.contentMode = .scaleAspectFit
+        imagePhoto.clipsToBounds = true
+        imagePhoto.layer.masksToBounds = true
+        imagePhoto.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(imagePhoto)
     }
     
     func initConstraints(){
@@ -71,23 +74,22 @@ class FavouritesTableViewCell: UITableViewCell {
             wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
             wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
-            labelName.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 8),
-            labelName.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 16),
-            labelName.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -10),
-            labelName.heightAnchor.constraint(equalToConstant: 20),
-            labelName.widthAnchor.constraint(lessThanOrEqualTo: wrapperCellView.widthAnchor),
+            imagePhoto.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 10),
+            imagePhoto.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 10),
+            imagePhoto.heightAnchor.constraint(equalToConstant: 80),
+            imagePhoto.widthAnchor.constraint(equalToConstant: 80),
             
-            labelPlace.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 2),
-            labelPlace.leadingAnchor.constraint(equalTo: labelName.leadingAnchor),
-            labelPlace.heightAnchor.constraint(equalToConstant: 16),
-            labelPlace.widthAnchor.constraint(lessThanOrEqualTo: labelName.widthAnchor),
+            labelPrompt.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 8),
+            labelPrompt.leadingAnchor.constraint(equalTo: imagePhoto.trailingAnchor, constant: 16),
+            labelPrompt.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -20),
+            labelPrompt.heightAnchor.constraint(equalToConstant: 20),
             
-            labelText.topAnchor.constraint(equalTo: labelPlace.bottomAnchor, constant: 2),
-            labelText.leadingAnchor.constraint(equalTo: labelPlace.leadingAnchor),
-            labelText.heightAnchor.constraint(equalToConstant: 16),
-            labelText.widthAnchor.constraint(lessThanOrEqualTo: labelName.widthAnchor),
+            labelAnswer.topAnchor.constraint(equalTo: labelPrompt.bottomAnchor, constant: 2),
+            labelAnswer.leadingAnchor.constraint(equalTo: labelPrompt.leadingAnchor),
+            labelAnswer.trailingAnchor.constraint(equalTo: wrapperCellView.trailingAnchor, constant: -20),
+            labelAnswer.heightAnchor.constraint(equalToConstant: 16),
             
-            wrapperCellView.heightAnchor.constraint(equalToConstant: 72)
+            wrapperCellView.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
 

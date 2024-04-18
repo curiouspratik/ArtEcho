@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BufferSpinnerView: UIViewController {
+class BufferSpinnerViewController: UIViewController {
     
     var activityIndicator: UIActivityIndicatorView!
 
