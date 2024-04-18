@@ -110,7 +110,8 @@ class NewPromptViewController: UIViewController {
                 newPromptView.AnswerLabel.text = text
             }
         } catch {
-            print("error in call")
+            self.hideActivityIndicator()
+            self.present(showCustomAlert(message: "Error please check the internet connection."), animated: true)
         }
     }
 }

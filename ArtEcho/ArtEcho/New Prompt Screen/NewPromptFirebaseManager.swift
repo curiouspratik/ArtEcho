@@ -93,8 +93,8 @@ extension NewPromptViewController {
                       }
                   }
             } catch {
-//                self.hideActivityIndicator()
-                print("Error adding chat")
+                self.hideActivityIndicator()
+                self.present(showCustomAlert(message: "Error while saving data, please check the internet connection."), animated: true)
             }
             
             
